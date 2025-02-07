@@ -105,3 +105,71 @@ footer{
     width: 70%;
     padding: 0;
 }
+
+/* Botón flotante para reproducir música */
+#toggle-audio {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: #ff69b4; /* Rosa Kuromi */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Efecto hover (cuando se pasa el mouse) */
+#toggle-audio:hover {
+    background: #d64990; /* Rosa más oscuro */
+}
+
+/* Efecto activo (cuando se presiona) */
+#toggle-audio:active {
+    transform: scale(0.9);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo del botón de reproducir música */
+#play-audio {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ff69b4; /* Color rosa Kuromi */
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    animation: pulse 1.5s infinite;
+}
+
+/* Efecto hover */
+#play-audio:hover {
+    background: #d64990;
+    transform: translateX(-50%) scale(1.1);
+}
+
+/* Efecto clic */
+#play-audio:active {
+    transform: translateX(-50%) scale(0.95);
+}
+
+/* Animación de latido */
+@keyframes pulse {
+    0% { transform: translateX(-50%) scale(1); }
+    50% { transform: translateX(-50%) scale(1.1); }
+    100% { transform: translateX(-50%) scale(1); }
+}

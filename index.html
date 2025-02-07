@@ -10,9 +10,9 @@
 </head>
 <body>
     <header class="header"><img class="header__img" src="assets/header.gif"><img class="header__img" src="assets/header.gif"><img class="header__img" src="assets/header.gif"></header>
-    <audio id="music" autoplay loop>
+    <audio id="music" loop>
         <source src="assets/kuromi_00.ogg" type="audio/mp3">
-        Tu navegador no soporta audio.
+        <source src="assets/kuromi_00.mp3" type="audio/mp3">
     </audio>
 
     <h1 class="titulo">¡¡Ven a celebrar conmigo!! 🎉</h1>
@@ -22,6 +22,8 @@
     <div class="slideshow">
         <img id="slide-img" src="assets/kuromi_01.gif" alt="Kuromi">
     </div>
+
+    <button id="play-audio" style="display: none;">🎵 Reproducir música</button>
 
     <p class="destacado animacion">🎂 María Fernanda 🎂
         <br>¡¡¡ Cumple 6 años !!! 
@@ -33,6 +35,7 @@
         <br><span id="countdown"></span> 
         <BR>Para la fiesta 🎊
     </div>
+    <button id="toggle-audio" style="position: fixed; bottom: 20px; right: 20px; background: pink; padding: 10px; border-radius: 50px; font-size: 20px;">🔊</button>
     <footer><img class="header__img" src="assets/header.gif"><img class="header__img" src="assets/header.gif"><img class="header__img" src="assets/header.gif"></footer>
 </body>
 </html>

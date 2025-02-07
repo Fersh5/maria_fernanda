@@ -1,10 +1,34 @@
 // 🎶 Reproducir música al cargar la página
 document.addEventListener("DOMContentLoaded", function() {
     let audio = document.getElementById("music");
-    audio.volume = 0.5; // Ajustar volumen
-    audio.play().catch(error => {
-        console.log("Autoplay bloqueado, esperando interacción...");
-    });
+    let playButton = document.getElementById("play-audio");
+
+    // Mostrar botón si autoplay está bloqueado
+    setTimeout(() => {
+        if (audio.paused) {
+            playButton.style.display = "block";
+        }
+    }, 500);
+
+    // Iniciar audio al tocar cualquier parte de la pantalla
+    document.addEventListener("click", function() {
+        audio.play();
+        playButton.style.display = "none"; // Ocultar botón al reproducir
+    }, { once: true });
+});
+
+// button audio 
+let audio = document.getElementById("music");
+let audioButton = document.getElementById("toggle-audio");
+
+audioButton.addEventListener("click", function() {
+    if (audio.paused) {
+        audio.play();
+        audioButton.textContent = "🔊";
+    } else {
+        audio.pause();
+        audioButton.textContent = "🔇";
+    }
 });
 
 // 🎡 Slideshow de imágenes
