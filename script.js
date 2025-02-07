@@ -2,7 +2,9 @@
 document.addEventListener("DOMContentLoaded", function() {
     let audio = document.getElementById("music");
     audio.volume = 0.5; // Ajustar volumen
-    audio.play();
+    audio.play().catch(error => {
+        console.log("Autoplay bloqueado, esperando interacción...");
+    });
 });
 
 // 🎡 Slideshow de imágenes
@@ -31,7 +33,7 @@ setInterval(changeImage, 3000); // Cambiar cada 3 segundos
 
 // ⏳ Cuenta regresiva hasta el 20 de febrero
 function actualizarCuentaRegresiva() {
-    let fechaEvento = new Date("February 20, 2025 16:00:00").getTime();
+    let fechaEvento = new Date("February 20, 2025 13:30:00").getTime();
     let ahora = new Date().getTime();
     let diferencia = fechaEvento - ahora;
 
