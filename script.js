@@ -57,7 +57,7 @@ setInterval(changeImage, 3000); // Cambiar cada 3 segundos
 
 // ⏳ Cuenta regresiva hasta el 20 de febrero
 function actualizarCuentaRegresiva() {
-    let fechaEvento = new Date("February 20, 2025 13:30:00").getTime();
+    let fechaEvento = new Date("February 21, 2025 13:30:00").getTime();
     let ahora = new Date().getTime();
     let diferencia = fechaEvento - ahora;
 
